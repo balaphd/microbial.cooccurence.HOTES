@@ -1,5 +1,5 @@
-# microbial.cooccurence.HOTES
-### TITLE
+# Microbial.Cooccurence.HOTES
+### Title
 Microbial co-occurrence network patterns in moisture damaged homes in Finland.
 #Abstract
 
@@ -29,6 +29,6 @@ The main objective of the paper is to construct microbial co-occurrence network 
 - Doing the same with the combined network
 - Locate the signature sequences in all the networks constructed
 
-### RESULTS
+### Results
 
 ### Discussion

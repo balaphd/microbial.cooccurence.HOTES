@@ -19,7 +19,7 @@ The main objective of the paper is to construct microbial co-occurrence network 
 (4) What/How does the identified signatures in HOTES paper (first one) placed/explained in the microbial co-occurence network (5) Does renovation has an effect on the interaction of microbes with this signature microbes (from first paper) in the network? 
 (6) Is it possible to identify signature co-occurence microbes specific to moisture damaged environment?
 
-### METHODS
+### Methods
 
 - Constructing microbial co-occurence network from moisture damaged homes
 - Constructing microbial co-occurence network from renovated homes
@@ -29,3 +29,6 @@ The main objective of the paper is to construct microbial co-occurrence network 
 - Doing the same with the combined network
 - Locate the signature sequences in all the networks constructed
 
+### RESULTS
+
+### Discussion

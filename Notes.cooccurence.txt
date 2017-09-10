@@ -1,0 +1,10 @@
+Reason for co-occurence and other way around
+
+- Mutualism (Win-win) [+ = +]
+- Predator/parasite (Win-loss) [+ = -]
+- Prey/host (Loss-win) [- = +]
+- commensalism (Win-neutral) [ + = 0 ]
+- competition (loss-loss) [ - = - ]
+- amensalism (loss-neutral) [- = 0 ]
+
+A clarification of interaction in ecological systems (1979) Lidicker.W.Z

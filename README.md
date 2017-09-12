@@ -29,6 +29,14 @@ The main objective of the paper is to construct microbial co-occurrence network 
 - Doing the same with the combined network
 - Locate the signature sequences in all the networks constructed
 
+The otu table was splitted for moisture damaged samples only and renovated only.
+
+Preliminary steps were 
+- the OTU table was filtered for only closed reference OTUs only. The reasoning behind this is to address the problem regarding the denovo otu picking done by open reference approach. Since denovo otu picking is not robust as closed reference OTUIDs.  
+-
+
+
+
 ### Results
 
 ### Discussion

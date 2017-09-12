@@ -68,7 +68,9 @@ Run randomization and create permutations.txt
 
 Then use the permutation.txt as null distribution and do the bootstrap to create robust network.
 
+Then the network was selected for only positive edges and negative edges seperately.
 
+After that step, the positive edges (co-occurence) network was clustered with Cytocluster in cytoscape and the clusters in network were identified. They were analysed for taxa lineage within the cluster to infer some biological meaning in it.
 
 
 

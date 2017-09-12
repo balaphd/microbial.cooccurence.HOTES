@@ -42,6 +42,33 @@ $ wc -l bac.mdonly.closed.otu.readable.txt
     CONET(Co-occurrence Network inference) network construction:
 
 This otu table with 3721 OTUs were used as input into CONET application in Cytoscape software.
+the resulting network was constructed with below 
+Parameters such as 
+
+PREPROCESSING AND FILTERING MENU:
+Input filtering: row_minocc = 20.0
+Keep sum of filtered rows: yes 
+Standardization: col_norm: yes [column normalization]
+
+METHODS:
+Correlation threshold applies to both positive an d negative correlations (Pearson correlation and Spearman correlation)
+Multiple-test corrections (none but bonferroni and benjaminihochberg can be applied)
+
+Similarities (Mutual Information)
+
+Distances (Bray Curtis dissimilarities and Kullback-Leibler dissimilarities)
+
+Top edges (edgeNumber) edge selection parameter = 1000
+Top and bottom
+
+Randomization menu: 
+Randomization options brown, filter unstable edges
+
+Run randomization and create permutations.txt
+
+Then use the permutation.txt as null distribution and do the bootstrap to create robust network.
+
+
 
 
 

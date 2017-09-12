@@ -33,7 +33,16 @@ The otu table was splitted for moisture damaged samples only and renovated only.
 
 Preliminary steps were 
 - the OTU table was filtered for only closed reference OTUs only. The reasoning behind this is to address the problem regarding the denovo otu picking done by open reference approach. Since denovo otu picking is not robust as closed reference OTUIDs.  
--
+$ sed '/New/d' bac.mdonly.otu.readable.txt > bac.mdonly.closed.otu.readable.txt
+$ wc -l bac.mdonly.otu.readable.txt 
+    4423 bac.mdonly.otu.readable.txt
+$ wc -l bac.mdonly.closed.otu.readable.txt 
+    3721 bac.mdonly.closed.otu.readable.txt
+    
+    CONET(Co-occurrence Network inference) network construction:
+
+This otu table with 3721 OTUs were used as input into CONET application in Cytoscape software.
+
 
 
 

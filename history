@@ -1,0 +1,16 @@
+  417  cat sample_grp_for_connection_renov.txt | grep "post"
+  418  cat sample_grp_for_connection_renov.txt | grep "pre" | awk '{print $1}' > samples.to.keep.post.20.renov.txt
+  419  ls
+  420  filter_samples_from_otu_table.py -i bac.otu.table.41vs41.allpairs.biom --sample_id_fp samples.to.keep.post.20.renov.txt -o /Users/balathl/phd.work/cooccurence.phd.work/cooccurence/bacteria/post.renov.20/otu.table.hotes.post.renov.20.all.otus.biom
+  421  cd /Users/balathl/phd.work/cooccurence.phd.work/cooccurence/bacteria/post.renov.20/
+  422  ls
+  423  biom convert -i otu.table.hotes.post.renov.20.all.otus.biom -o otu.table.hotes.post.renov.20.all.otus.readable.txt --to-tsv --table-type 'OTU table' --header-key taxonomy --output-metadata-id taxonomy
+  424  sed '/New/d' otu.table.hotes.post.renov.20.all.otus.readable.txt > otu.table.hotes.post.renov.20.closed.otus.readable.txt 
+  425  history | grep "biom convert" 
+  426  biom convert -i otu.table.hotes.post.renov.20.closed.otus.readable.txt -o otu.table.hotes.post.renov.20.closed.otus.hdf5.biom --to-hdf5 --table-type 'OTU table' --process-obs-metadata taxonomy
+  427  filter_otus_from_otu_table.py -i otu.table.hotes.post.renov.20.closed.otus.hdf5.biom -o otu.table.hotes.post.renov.20.closed.otus.min00005.hdf5.biom --min_count_fraction 0.00005
+  428  biom convert -i otu.table.hotes.post.renov.20.closed.otus.min00005.hdf5.biom -o otu.table.hotes.post.renov.20.closed.otus.min00005.json.biom --to-json --table-type 'OTU table'
+  429  biom convert -i otu.table.hotes.post.renov.20.closed.otus.min00005.hdf5.biom -o otu.table.hotes.post.renov.20.closed.otus.min00005.readable.txt --to-tsv --table-type 'OTU table' --header-key taxonomy --output-metadata-id taxonomy
+  
+  ###############
+  created seperate otu tables for pre and post renov samples and only closed reference OTUs were selected and filtered for spurious otus 0.00005 parameter value.

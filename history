@@ -14,3 +14,13 @@
   
   ###############
   created seperate otu tables for pre and post renov samples and only closed reference OTUs were selected and filtered for spurious otus 0.00005 parameter value.
+########
+  566  biom convert -i otu.table.hotes.post.41.all.otus.biom -o otu.table.hotes.post.41.all.otus.readable.txt --to-tsv --table-type 'OTU table' --header-key taxonomy --output-metadata-id taxonomy
+  567  sed '/New/d' otu.table.hotes.post.41.all.otus.readable.txt > otu.table.hotes.post.41.closed.otus.readable.txt
+  568  biom convert -i otu.table.hotes.post.41.closed.otus.readable.txt -o otu.table.hotes.post.41.closed.otus.hdf5.biom --to-hdf5 --table-type 'OTU table' --process-obs-metadata taxonomy
+  569  filter_otus_from_otu_table.py -i otu.table.hotes.post.41.closed.otus.hdf5.biom -o otu.table.hotes.post.41.closed.otus.min00005.hdf5.biom --min_count_fraction 0.00005
+  570  biom convert -i otu.table.hotes.post.41.closed.otus.min00005.hdf5.biom -o otu.table.hotes.post.41.closed.otus.min00005.json.biom --to-json --table-type 'OTU table'
+  571  biom convert -i otu.table.hotes.post.41.closed.otus.min00005.hdf5.biom -o otu.table.hotes.post.41.closed.otus.min00005.readable.txt --to-tsv --table-type 'OTU table' --header-key taxonomy --output-metadata-id taxonomy
+  572  mkdir final.files.post.41
+  573  mv otu.table.hotes.post.41.closed.otus.min00005* final.files.post.41/.
+  ###############

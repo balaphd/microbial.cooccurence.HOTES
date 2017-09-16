@@ -26,6 +26,7 @@
   ###############
  Creating lineage file for fungal OTU table for integration into cytoscape
  ######
+ filter_otus_from_otu_table.py -i fun.otu.mdonly.biom -o fun.otu.table.hotes.pre.98.all.otus.min00005.hdf5.biom --min_count_fraction 0.00005
   biom convert -i fun.otu.mdonly.biom -o fun.otu.mdonly.txt --header-key taxonomy --table-type 'OTU table' --to-tsv
   sed -e 's/ //g' -e 's/"//g' fun.otu.mdonly.txt > fun.otu.mdonly.mod.txt
   awk '{print $1,$NF}' fun.otu.mdonly.mod.txt > lineage.txt

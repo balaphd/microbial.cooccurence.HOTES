@@ -24,3 +24,10 @@
   572  mkdir final.files.post.41
   573  mv otu.table.hotes.post.41.closed.otus.min00005* final.files.post.41/.
   ###############
+ Creating lineage file for fungal OTU table for integration into cytoscape
+ ######
+  biom convert -i fun.otu.mdonly.biom -o fun.otu.mdonly.txt --header-key taxonomy --table-type 'OTU table' --to-tsv
+  awk '{print $1,$NF}' fun.otu.mdonly.mod.txt > lineage.txt
+  nano lineage.txt
+  sed 's/^/TAXON-/g' lineage.txt > lineage.new.txt
+#########

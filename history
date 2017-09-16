@@ -27,6 +27,7 @@
  Creating lineage file for fungal OTU table for integration into cytoscape
  ######
   biom convert -i fun.otu.mdonly.biom -o fun.otu.mdonly.txt --header-key taxonomy --table-type 'OTU table' --to-tsv
+  sed -e 's/ //g' -e 's/"//g' fun.otu.mdonly.txt > fun.otu.mdonly.mod.txt
   awk '{print $1,$NF}' fun.otu.mdonly.mod.txt > lineage.txt
   nano lineage.txt
   sed 's/^/TAXON-/g' lineage.txt > lineage.new.txt
